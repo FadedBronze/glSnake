@@ -3,7 +3,7 @@
 #include <iostream>
 
 FlyCamera::FlyCamera(Window& window, Camera& camera, float cameraSpeed)
-    :camera(camera), window(window), cameraSpeed(cameraSpeed)
+    : cameraSpeed(cameraSpeed)
 {
     window.onMouseMove = [&camera, &window](MousePosition mousePos) {
         const float sensitivity = 0.05;
@@ -23,7 +23,7 @@ FlyCamera::FlyCamera(Window& window, Camera& camera, float cameraSpeed)
     window.onKeyDown = [&camera](int _){};
 }
 
-void FlyCamera::fly()
+void FlyCamera::fly(Window& window, Camera& camera)
 {
     auto glfwWindow = window.getGLFWWindow();
 

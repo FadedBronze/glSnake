@@ -4,8 +4,7 @@
 #include "Renderer.h"
 #include <iostream>
 
-float deltaTime = 0.0f;	// Time between current frame and last frame
-float lastFrame = 0.0f; // Time of last frame
+
 
 Window* get_context(GLFWwindow* w) {
     // Cast the user pointer of the window to callback_context type and return it
@@ -97,11 +96,14 @@ Window::~Window()
 
 void Window::Update(const std::function<void(float)>& update)
 {
-    float currentFrame = glfwGetTime();
-    deltaTime = currentFrame - lastFrame;
-    lastFrame = currentFrame;
+    float deltaTime = 0.0f;	// Time between current frame and last frame
+    float lastFrame = 0.0f; // Time of last frame
 
     while (!glfwWindowShouldClose(glfwWindow)) {
+        float currentFrame = glfwGetTime();
+        deltaTime = currentFrame - lastFrame;
+        lastFrame = currentFrame;
+
         update(deltaTime);
         glfwSwapBuffers(glfwWindow);
         glfwPollEvents();

@@ -146,6 +146,7 @@
     <ClCompile Include="src\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Color.h" />
     <ClInclude Include="src\FlyCamera.h" />
     <ClInclude Include="src\Camera.h" />
     <ClInclude Include="src\Shader.h" />

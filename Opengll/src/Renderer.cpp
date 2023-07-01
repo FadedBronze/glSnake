@@ -2,7 +2,6 @@
 #include <GL/glew.h>
 #include <iostream>
 
-
 void glClearError() {
     while (glGetError() != GL_NO_ERROR);
 }
@@ -37,5 +36,4 @@ void Renderer::Draw3D(VertexBuffer& vb, unsigned int count, Shader& shader)
 void Renderer::Clear()
 {
     GL_CALL(glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT));
-    GL_CALL(glClear(GL_COLOR_BUFFER_BIT));
 }

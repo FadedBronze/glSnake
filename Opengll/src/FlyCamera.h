@@ -6,12 +6,8 @@ class FlyCamera
 {
 public: 
 	float cameraSpeed;
-private:
-	Camera& camera;
-	Window& window;
-
 public:
 	FlyCamera(Window& window, Camera& camera, float cameraSpeed);
-	void fly();
+	void fly(Window& window, Camera& camera);
 };
 

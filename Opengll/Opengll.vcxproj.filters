@@ -83,6 +83,9 @@
     <ClInclude Include="src\FlyCamera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Color.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />
